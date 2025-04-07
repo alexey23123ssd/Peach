@@ -1,0 +1,28 @@
+#root {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  border: 2px solid red;
+  margin-bottom: 79px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/*# sourceMappingURL=App.css.map */
