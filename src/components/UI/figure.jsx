@@ -1,16 +1,20 @@
 import React from 'react';
 
-const Figure = ({businessesArr}) => {
+const Figure = ({item,className}) => {
     return (
-        <div className='business-section__items'>
-            {businessesArr.map((item,index) =>
-            <figure className='business-section__item' key={index}>
-                {item.img}
-                <figcaption>{item.desc}</figcaption>
+            <figure className={className+"__item"}>
+                <div  className={className+"__item-wrapper"}>
+                    <img className={className+"__img"} src={item.img} />
+                </div>
+                <figcaption className={className+"__text"}>
+                    {item.desc}
+                    {className === "business-section" ?
+                        <p className="business-section__text__content">{item.content}</p>
+                        :
+                        null
+                    }
+                </figcaption>
             </figure>
-        )}
-        </div>
-
     );
 };
 

@@ -4,7 +4,7 @@ import Logo from "./UI/logo.jsx";
 const Header = ({headerItemsArr}) => {
     return (
         <div className="header">
-            <div className="wrapper header__wrapper">
+            <div className="header__wrapper">
                 <div className="header__logo">
                     <Logo/>
                 </div>
