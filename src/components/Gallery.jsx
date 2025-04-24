@@ -18,10 +18,10 @@ const Gallery = ({galleryArr}) => {
                 <h2 className="gallery-section__heading">Корпоративная жизнь</h2>
                 <div className="gallery-section__buttons">
                     <button  onClick={prevSlide} className="gallery-section__button gallery-section_button-left">
-                        <img src="src/img/left.svg" alt="arrow-left"/>
+                        <img src="src/img/left.svg" alt="arrow-left" className="gallery-section__arrow-left"/>
                     </button>
                     <button onClick={nextSlide} className="gallery-section__button gallery-section_button-right">
-                        <img src="src/img/right.svg" alt="arrow-right"/>
+                        <img src="src/img/right.svg" alt="arrow-right" className="gallery-section__arrow-right"/>
                     </button>
                 </div>
             </div>
