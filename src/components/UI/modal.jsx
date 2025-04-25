@@ -33,7 +33,7 @@ const Modal = ({regionsArr,citiesArr,isPressed}) => {
                             </div>
 
                             <ul  className="map-section__modal-item__list">
-                                {citiesArr.map((city,index) => city.region===item ?
+                                { citiesArr.map((city,index) => city.region===item ?
                                     <li className="map-section__modal-item__list-item" key={index}>
                                         {city.name}
                                     </li>

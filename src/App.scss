@@ -23,8 +23,6 @@ html{
   box-sizing: border-box;
   position: relative;
   overflow-x: hidden;
-  --container: 290px;
-  --padding-container:15px;
 }
 *,*::before,*::after{
   box-sizing: inherit;
@@ -38,7 +36,7 @@ body{
 
 .wrapper{
   max-width:calc($container + $paddingContainer*2);
-  padding:20px var(--padding-container);
+  padding:20px $paddingContainer;
   margin:0 auto;
 }
 
@@ -47,7 +45,6 @@ body{
   flex-direction:column;
   justify-content:space-between;
   gap:15px;
-  border:2px solid lightgrey;
 }
 .header__list{
   list-style:none;
@@ -62,6 +59,7 @@ body{
 .header__item{
   cursor: pointer;
 }
+
 
 .appeal-section__heading{
   @include fontSettings(600,28px,$textColor);
@@ -435,16 +433,26 @@ cursor: pointer;
 }
 
 @media screen and (min-width: 1000px) {
+  $container:1250px;
+  $paddingContainer:335px;
+
+  .wrapper{
+    max-width:calc($container + $paddingContainer*2);
+    padding:20px $paddingContainer;
+    margin:0 auto;
+  }
+
   .header {
-    border: 1px solid rgba(217, 217, 217, 1);
     margin-bottom: 79px;
     padding: 20px 70px;
+    border: 1px solid #D9D9D9;
   }
 
   .header__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 
   .header__list {
@@ -458,6 +466,11 @@ cursor: pointer;
     cursor: pointer;
   }
 
+  .appeal-section{
+    text-align: center;
+    margin-bottom: 79px;
+  }
+
   .appeal-section__heading {
     @include fontSettings(700, 56px, $textColor);
     margin-bottom: 30px;
@@ -466,6 +479,10 @@ cursor: pointer;
   .appeal-section__text {
     @include fontSettings(400, 32px, $textHeadingColor);
     margin: 0;
+  }
+
+  .appeal-section__info{
+    display: none;
   }
 
   .map-section {
@@ -480,6 +497,7 @@ cursor: pointer;
 
   .map-section__header {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.06);
     width: 100%;
@@ -602,6 +620,10 @@ cursor: pointer;
     transform: scale(1.1);
   }
 
+  .map-section__modal-item__arrow{
+    display:none;
+  }
+
   .mission-section {
     border: 2px solid saddlebrown;
     padding: 139px 72px 140px 68px;
@@ -681,16 +703,23 @@ cursor: pointer;
     height: 100%;
   }
 
+  .business-section__text__desc{
+    margin: 0;
+  }
+
   .business-section__text__content {
     @include fontSettings(400, 17px, $textFontColor);
     white-space: wrap;
     text-align: start;
+  }
 
+  .business-section__arrow{
+    display: flex;
   }
 
   .benefits-section {
     text-align: center;
-    margin-bottom: 103px;
+    margin-bottom: 123px;
   }
 
   .benefits-section__heading {
